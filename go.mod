@@ -16,7 +16,7 @@ require (
 	github.com/go-openapi/runtime v0.23.3
 	github.com/go-openapi/spec v0.20.6
 	github.com/go-openapi/strfmt v0.21.3
-	github.com/go-openapi/swag v0.21.1
+	github.com/go-openapi/swag v0.22.1
 	github.com/go-openapi/validate v0.22.0
 	github.com/gocql/gocql v0.0.0-20211222173705-d73e6b1002a7
 	github.com/gogo/googleapis v1.4.1
@@ -51,7 +51,7 @@ require (
 	go.opentelemetry.io/collector/pdata v0.57.2
 	go.opentelemetry.io/collector/semconv v0.57.2
 	go.opentelemetry.io/otel v1.9.0
-	go.uber.org/atomic v1.9.0
+	go.uber.org/atomic v1.10.0
 	go.uber.org/automaxprocs v1.5.1
 	go.uber.org/zap v1.22.0
 	golang.org/x/net v0.0.0-20220520000938-2e3eb7b945c2
