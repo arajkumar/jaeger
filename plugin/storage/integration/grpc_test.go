@@ -201,3 +201,21 @@ func TestGRPCRemoteStorage(t *testing.T) {
 	require.NoError(t, s.initialize())
 	s.IntegrationTestAll(t)
 }
+
+func TestExternalGRPCStorage(t *testing.T) {
+	if os.Getenv("STORAGE") != "grpc-plugin" {
+		t.Skip("Integration test against externla GRPC server skipped; set STORAGE env var to grpc-plugin to run this")
+	}
+
+	flags := []string{
+		"--grpc-storage.server=localhost:9202",
+		"--grpc-storage.tls.enabled=false",
+	}
+
+	s := &GRPCStorageIntegrationTestSuite{
+		flags:  flags,
+		server: nil,
+	}
+	require.NoError(t, s.initialize())
+	s.IntegrationTestAll(t)
+}
